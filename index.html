@@ -26,12 +26,31 @@
             border-bottom: 1px solid #30363d;
             padding-bottom: 6px;
         }
+
+        /* App card layout with thumbnail */
         .app {
             background: #161b22;
             padding: 15px;
             margin-top: 15px;
             border-radius: 8px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
         }
+        .app-thumb {
+            width: 84px;
+            height: 84px;
+            border-radius: 10px;
+            object-fit: cover;
+            flex: 0 0 auto;
+            border: 1px solid #30363d;
+            background: #0d1117;
+        }
+        .app-content {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
         .recommended {
             border: 2px solid #238636;
         }
@@ -43,6 +62,7 @@
             padding: 3px 8px;
             border-radius: 12px;
             margin-left: 8px;
+            vertical-align: middle;
         }
         .app a {
             display: inline-block;
@@ -62,6 +82,18 @@
             opacity: 0.8;
             margin-top: 40px;
         }
+
+        /* Mobile: stack thumbnail above content */
+        @media (max-width: 520px) {
+            .app {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .app-thumb {
+                width: 100%;
+                height: 160px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -74,74 +106,98 @@
 <h2>Recommended (New Android Boxes & Firesticks)</h2>
 
 <div class="app recommended">
-    <strong>Wicked TV VPN XC</strong>
-    <span class="badge">Recommended</span><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/WickedTVvpnXC.apk">
-        Download APK
-    </a>
+    <img class="app-thumb" src="images/wicked-tv-vpn-xc.png" alt="Wicked TV VPN XC">
+    <div class="app-content">
+        <strong>Wicked TV VPN XC</strong>
+        <span class="badge">Recommended</span><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/WickedTVvpnXC.apk">
+            Download APK
+        </a>
+    </div>
 </div>
 
 <div class="app recommended">
-    <strong>WickedTV 3.1</strong>
-    <span class="badge">Recommended</span><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/WickedTV.3.1.apk">
-        Download APK
-    </a>
+    <img class="app-thumb" src="images/wicked-tv-3-1.png" alt="WickedTV 3.1">
+    <div class="app-content">
+        <strong>WickedTV 3.1</strong>
+        <span class="badge">Recommended</span><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/WickedTV.3.1.apk">
+            Download APK
+        </a>
+    </div>
 </div>
 
 <h2>Sky Apps</h2>
 
 <div class="app">
-    <strong>IBO Sky X 3.9</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/IBO_SKY_X_3.9.apk">Download APK</a>
+    <div class="app-content">
+        <strong>IBO Sky X 3.9</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/IBO_SKY_X_3.9.apk">Download APK</a>
+    </div>
 </div>
 
 <div class="app">
-    <strong>Smarters V4 Sky X (Latest)</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Smarters_V4_Sky_X_latest_release.apk">Download APK</a>
+    <div class="app-content">
+        <strong>Smarters V4 Sky X (Latest)</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Smarters_V4_Sky_X_latest_release.apk">Download APK</a>
+    </div>
 </div>
 
 <div class="app">
-    <strong>Sky Q VU</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Sky_Q_VU.apk">Download APK</a>
+    <div class="app-content">
+        <strong>Sky Q VU</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Sky_Q_VU.apk">Download APK</a>
+    </div>
 </div>
 
 <div class="app">
-    <strong>XC Sky X</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/XC_Sky_X.apk">Download APK</a>
+    <div class="app-content">
+        <strong>XC Sky X</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/XC_Sky_X.apk">Download APK</a>
+    </div>
 </div>
 
 <h2>IBO Apps</h2>
 
 <div class="app">
-    <strong>Sky Live IBO 3.8</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Sky_Live_IBO_3.8.apk">Download APK</a>
+    <div class="app-content">
+        <strong>Sky Live IBO 3.8</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Sky_Live_IBO_3.8.apk">Download APK</a>
+    </div>
 </div>
 
 <div class="app">
-    <strong>Sky Live IBO Ultimate</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Sky_Live_IBO_Ultimate.apk">Download APK</a>
+    <div class="app-content">
+        <strong>Sky Live IBO Ultimate</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Sky_Live_IBO_Ultimate.apk">Download APK</a>
+    </div>
 </div>
 
 <div class="app">
-    <strong>Wicked IBO 3.9</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Wicked.ibo_3.9.apk">Download APK</a>
+    <div class="app-content">
+        <strong>Wicked IBO 3.9</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Wicked.ibo_3.9.apk">Download APK</a>
+    </div>
 </div>
 
 <h2>Premier</h2>
 
 <div class="app">
-    <strong>Premier 4.1</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Premier.4.1.apk">Download APK</a>
+    <div class="app-content">
+        <strong>Premier 4.1</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Premier.4.1.apk">Download APK</a>
+    </div>
 </div>
 
 <div class="app">
-    <strong>Premier 3.1</strong><br>
-    <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Premier.3.1.apk">Download APK</a>
+    <div class="app-content">
+        <strong>Premier 3.1</strong><br>
+        <a href="https://github.com/TechyTackler/android-downloads/releases/download/v1.0.0/Premier.3.1.apk">Download APK</a>
+    </div>
 </div>
 
 <p class="note">
-    If prompted, enable “Install unknown apps” on your Android device to continue..
+    Install one recommended app unless you have been advised otherwise.
 </p>
 
 </body>
